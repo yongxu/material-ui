@@ -1,6 +1,6 @@
 let React = require('react/addons');
 let StylePropable = require('../mixins/style-propable');
-let MenuItem = require('../lists/list-item');
+let MenuItem = require('../menus/menu-item');
 
 let SideNavSubheader = React.createClass({
 
