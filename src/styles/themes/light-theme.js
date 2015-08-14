@@ -74,6 +74,9 @@ let LightTheme = {
         secondaryColor: palette.primary1Color,
         secondaryIconColor: Colors.white,
       },
+      inkBar: {
+        backgroundColor: Colors.yellow200,
+      },
       leftNav: {
         width: spacing.desktopKeylineIncrement * 4,
         color: Colors.white,
@@ -118,6 +121,10 @@ let LightTheme = {
         secondaryColor: palette.primary1Color,
         secondaryTextColor: Colors.white,
       },
+      refreshIndicator: {
+        strokeColor: Colors.grey300,
+        loadingStrokeColor: palette.primary1Color,
+      },
       slider: {
         trackSize: 2,
         trackColor: Colors.minBlack,
@@ -153,7 +160,7 @@ let LightTheme = {
       tableHeaderColumn: {
         textColor: Colors.lightBlack,
         height: 56,
-        spacing: 28,
+        spacing: 24,
       },
       tableFooter: {
         borderColor: palette.borderColor,
@@ -168,7 +175,7 @@ let LightTheme = {
       },
       tableRowColumn: {
         height: 48,
-        spacing: 28,
+        spacing: 24,
       },
       timePicker: {
         color: Colors.white,

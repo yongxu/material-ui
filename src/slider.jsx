@@ -214,8 +214,6 @@ let Slider = React.createClass({
       width: ((1 - this.state.percent) * 100) + (this.props.disabled ? -1 : 0) + '%',
     });
 
-    styles.percentZeroRemaining.width = styles.remaining.width - styles.percentZeroRemaining.left;
-
     return styles;
   },
 
@@ -390,7 +388,7 @@ let Slider = React.createClass({
   },
 
   _onMouseDown(e) {
-    this._pos = e.clientX;
+    if (!this.props.disabled) this._pos = e.clientX;
   },
 
   _onMouseEnter() {
