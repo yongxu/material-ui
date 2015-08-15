@@ -31,6 +31,7 @@ let Menus = require('./components/pages/components/menus');
 let Paper = require('./components/pages/components/paper');
 let Progress = require('./components/pages/components/progress');
 let RefreshIndicator = require('./components/pages/components/refresh-indicator');
+let SearchField = require('./components/pages/components/search-field');
 let Sliders = require('./components/pages/components/sliders');
 let SideNav = require('./components/pages/components/side-nav');
 let Snackbar = require('./components/pages/components/snackbar');
@@ -79,6 +80,7 @@ let AppRoutes = (
       <Route name="paper" handler={Paper} />
       <Route name="progress" handler={Progress} />
       <Route name="refresh-indicator" handler={RefreshIndicator} />
+      <Route name="search-field" handler={SearchField} />
       <Route name="sliders" handler={Sliders} />
       <Route name="side-nav" handler={SideNav} />
       <Route name="switches" handler={Switches} />
