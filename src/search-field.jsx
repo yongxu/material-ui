@@ -122,6 +122,20 @@ let SearchField = React.createClass({
         onItemTouchTap={this._handleItemTouchTap}
         listStyle={this.mergeAndPrefix(styles.list,listStyle)}
         openDirection="bottom-left"
+
+        onBlur={(e)=>{
+          // if(this.state.focusOnTextField)
+          //   this.refs.searchTextField.focus();
+          console.log('mblur');
+          console.log(e);
+          e.preventDefault();
+        }}
+        onFocus={(e)=>{
+          console.log('mfocus');
+          console.log(e);
+          e.preventDefault();
+        }}
+
         style={mergedMenuStyles}>
         {
           requestsList.map((request,index) => {
@@ -131,7 +145,22 @@ let SearchField = React.createClass({
                           disableFocusRipple={true}
                           key={index}
                           value={request}
-                          primaryText={request} />);
+                          primaryText={request}
+
+                          onBlur={(e)=>{
+                            // if(this.state.focusOnTextField)
+                            //   this.refs.searchTextField.focus();
+                            console.log('blur');
+                            console.log(e);
+                            e.preventDefault();
+                          }}
+                          onFocus={(e)=>{
+                            console.log('focus');
+                            console.log(e);
+                            e.preventDefault();
+                          }}
+
+                          />);
               default:
                 return null;
             }
@@ -185,9 +214,12 @@ let SearchField = React.createClass({
               this._handleSearchTextChange
             }
             onBlur={()=>{
-              if(this.state.focusOnTextField)
-                this.refs.searchTextField.focus();
+              // if(this.state.focusOnTextField)
+              //   this.refs.searchTextField.focus();
+              // console.log('blur');
+              // console.log(e);
             }}
+
             {...textFieldProps} />
         </div>
           <ReactTransitionGroup>{menu}</ReactTransitionGroup>
@@ -247,6 +279,7 @@ let SearchField = React.createClass({
     }, this.props.touchTapCloseDelay);
 
     let index=parseInt(child.key,10);
+    
     let chosenRequest=this.state.requestsList[index];
     this.setState({searchText:chosenRequest});
     this.props.onNewRequest(chosenRequest,index);
