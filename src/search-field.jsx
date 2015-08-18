@@ -93,8 +93,8 @@ let SearchField = React.createClass({
         width: '100%',
       },
       list: {
+        display: 'block',
         width: this.props.fullWidth ? '100%' : 256,
-
       },
     };
 

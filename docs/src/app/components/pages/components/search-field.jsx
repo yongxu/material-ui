@@ -110,6 +110,10 @@ class SearchFields extends React.Component {
           <SearchField
             onUpdateRequests={(t) => {console.log(t); return [t,t+t,t+t+t];}}
             onNewRequest={(t) => {console.log('request:'+t);}} />
+          <SearchField
+            fullWidth = {true}
+            onUpdateRequests={(t) => {console.log(t); return [t,t+t,t+t+t];}}
+            onNewRequest={(t) => {console.log('request:'+t);}} />
 
         </div>
 
