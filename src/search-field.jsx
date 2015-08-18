@@ -262,7 +262,7 @@ let SearchField = React.createClass({
 
     let chosenRequest=this.state.requestsList[index];
     this.setState({searchText:chosenRequest});
-    this.props.onNewRequest(chosenRequest,index);
+    this.props.onNewRequest(chosenRequest,index,this.state.requestsList);
 
   },
 
