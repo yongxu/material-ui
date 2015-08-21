@@ -193,8 +193,8 @@ let SideNav = React.createClass({
               {...other}
               ref="menu"
               autoWidth={false}
-              style={this.mergeAndPrefix(styles.menu,menuStyle)}
-              listStyle={this.mergeAndPrefix(styles.list,listStyle)}
+              style={this.mergeAndPrefix(styles.menu, menuStyle)}
+              listStyle={this.mergeAndPrefix(styles.list, listStyle)}
               zDepth={zDepth}
               onItemTouchTap={this._onMenuItemClick} >
               {this.props.children}
