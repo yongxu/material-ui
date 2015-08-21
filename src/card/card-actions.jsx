@@ -3,6 +3,7 @@ let StylePropable = require('../mixins/style-propable');
 
 let CardActions = React.createClass({
   mixins:[StylePropable],
+
   getStyles() {
     return {
       root: {
