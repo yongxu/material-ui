@@ -182,12 +182,12 @@ let Slider = React.createClass({
         height: this.getTheme().handleSizeActive,
       },
       ripple: {
-        height: this.getTheme().handleSize, 
-        width: this.getTheme().handleSize, 
+        height: this.getTheme().handleSize,
+        width: this.getTheme().handleSize,
         overflow: 'visible',
       },
       rippleWhenPercentZero: {
-        top: -this.getTheme().trackSize, 
+        top: -this.getTheme().trackSize,
         left: -this.getTheme().trackSize,
       },
       rippleInner: {
