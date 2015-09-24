@@ -1,8 +1,7 @@
-let React = require('react');
-let StylePropable = require('../mixins/style-propable');
-
-let CardActions = React.createClass({
-  mixins:[StylePropable],
+const React = require('react');
+const StylePropable = require('../mixins/style-propable');
+const CardActions = React.createClass({
+  mixins: [StylePropable],
 
   getStyles() {
     return {
