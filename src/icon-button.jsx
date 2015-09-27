@@ -21,17 +21,6 @@ const IconButton = React.createClass({
     muiTheme: React.PropTypes.object,
   },
 
-  //for passing default theme context to children
-  childContextTypes: {
-    muiTheme: React.PropTypes.object,
-  },
-
-  getChildContext () {
-    return {
-      muiTheme: this.state.muiTheme,
-    };
-  },
-
   statics: {
     getRelevantContextKeys(muiTheme) {
       const spacing = muiTheme.rawTheme.spacing;
@@ -43,6 +32,7 @@ const IconButton = React.createClass({
         disabledColor: palette.disabledColor,
       };
     },
+
     getChildrenClasses() {
       return [
         EnhancedButton,
@@ -50,6 +40,17 @@ const IconButton = React.createClass({
         Tooltip,
       ];
     },
+  },
+
+  //for passing default theme context to children
+  childContextTypes: {
+    muiTheme: React.PropTypes.object,
+  },
+
+  getChildContext () {
+    return {
+      muiTheme: this.state.muiTheme,
+    };
   },
 
   propTypes: {
