@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StylePropable from './mixins/style-propable';
 import KeyCode from './utils/key-code';
 import TextField from './text-field';
 import Menu from './menus/menu';
@@ -44,10 +43,6 @@ const AutoComplete = React.createClass({
   contextTypes: {
     muiTheme: React.PropTypes.object,
   },
-
-  mixins: [
-    StylePropable,
-  ],
 
   getDefaultProps() {
     return {
